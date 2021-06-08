@@ -1,0 +1,3 @@
+[submodule "plugins/lintplus"]
+	path = plugins/lintplus
+	url = git@github.com:liquidev/lintplus

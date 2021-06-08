@@ -1,0 +1,1 @@
+/home/daknus/.config/lite-xl/plugins/lintplus/lintplus_rust.lua
