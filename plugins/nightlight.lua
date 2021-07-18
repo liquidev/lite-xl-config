@@ -7,10 +7,10 @@ local RootView = require "core.rootview"
 -- WARNING! by default, this uses a module user.colors.default which is NOT
 -- preinstalled with lite. creating this module is as simple as adapting
 -- the colors defined in core.style
-config.day_theme = "colors.noctis-lilac"
+config.day_theme = "colors.ayu-light"
 config.night_theme = "colors.ayu-mirage"
 
-config.day_hours = { start = 7, fin = 18 }
+config.day_hours = { start = 7, fin = 20 }
 
 local function get_time_of_day()
   local time = os.date("*t")

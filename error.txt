@@ -1,0 +1,16 @@
+Error: /home/daknus/.config/lite-xl/plugins/autocomplete.lua:235: bad argument #1 to 'get_width' (string expected, got table)
+stack traceback:
+	[C]: in function 'get_width'
+	/home/daknus/.config/lite-xl/plugins/autocomplete.lua:235: in function 'get_suggestions_rect'
+	/home/daknus/.config/lite-xl/plugins/autocomplete.lua:383: in function 'fn'
+	/home/daknus/Programs/lite/share/lite-xl/core/rootview.lua:884: in function 'draw'
+	/home/daknus/.config/lite-xl/plugins/autocomplete.lua:512: in function 'root_view_draw'
+	/home/daknus/.config/lite-xl/plugins/lsp/listbox.lua:289: in function 'root_view_draw'
+	...knus/Programs/lite/share/lite-xl/plugins/contextmenu.lua:31: in function 'root_view_draw'
+	.../daknus/Programs/lite/share/lite-xl/plugins/treeview.lua:402: in function 'draw'
+	/home/daknus/Programs/lite/share/lite-xl/core/init.lua:990: in function 'step'
+	/home/daknus/Programs/lite/share/lite-xl/core/init.lua:1033: in function </home/daknus/Programs/lite/share/lite-xl/core/init.lua:1029>
+	(...tail calls...)
+	[string "local core..."]:9: in function <[string "local core..."]:2>
+	[C]: in function 'xpcall'
+	[string "local core..."]:2: in main chunk

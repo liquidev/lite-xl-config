@@ -11,11 +11,11 @@ local RootView = require "core.rootview"
 -- consts
 local HomeDir = "/home/daknus"
 
--- font
+-- fonts
 local sans = "Lato-Regular.ttf"
-local mono = "SourceCodePro-Medium.ttf"
-local mono_italic = "SourceCodePro-MediumItalic.ttf"
-local mono_bold = "SourceCodePro-Bold.ttf"
+local mono = "RobotoMono-Medium.ttf"
+local mono_italic = "RobotoMono-MediumItalic.ttf"
+local mono_bold = "RobotoMono-Bold.ttf"
 
 local code_config = {
   antialiasing = "subpixel",
@@ -54,8 +54,9 @@ end
 
 -- config
 
+local sans_size, big_sans_size, code_size = 13, 32, 12.5
 core.reload_module "colors.ayu-mirage"
-load_fonts(13, 32, 13)
+load_fonts(sans_size, big_sans_size, code_size)
 
 config.fps = 144
 config.message_timeout = 1
@@ -65,6 +66,7 @@ config.max_tabs = 9
 
 config.lint = {}
 config.lint.lens_style = "solid"
+-- config.lint.zig_mode = "build"
 
 config.trimwhitespace = true
 
@@ -122,11 +124,17 @@ command.add(nil, {
 
 -- keybinds
 keymap.add {
+  -- viewport
   ["ctrl+shift+c"] = "doc:center-vertically",
+  -- indentation
   ["ctrl+]"]       = "doc:smart-indent",
   ["ctrl+["]       = "doc:unindent",
+  -- editing
   ["alt+up"]       = "doc:move-lines-up",
   ["alt+down"]     = "doc:move-lines-down",
+  ["alt+shift+up"]   = "doc:create-cursor-previous-line",
+  ["alt+shift+down"] = "doc:create-cursor-next-line",
+  -- control
   ["ctrl+e"]       = "core:find-file",
   ["ctrl+q"]       = "core:quit",
 }
@@ -141,7 +149,7 @@ end)
 local lintplus = require "plugins.lintplus"
 lintplus.setup.lint_on_doc_load()
 lintplus.setup.lint_on_doc_save()
-lintplus.enable_async()
+-- lintplus.enable_async()
 
 -- LSP
 
